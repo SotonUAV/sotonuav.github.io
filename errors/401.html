@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Soton UAV</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+		<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/design.js"></script>
+
+		<!-- Gallery links and src -->
+
+		<script type='text/javascript' src='../galleries/unitegallery/js/jquery-11.0.min.js'></script>	
+		<script type='text/javascript' src='../galleries/unitegallery/js/unitegallery.min.js'></script>	
+
+		<link rel='stylesheet' href='../galleries/unitegallery/css/unite-gallery.css' type='text/css' />
+	
+		<script type='text/javascript' src='../galleries/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+
+		<!-- include Unite Gallery Theme Files -->
+				
+		<script src='../galleries/unitegallery/themes/tilesgrid/ug-theme-tilesgrid.js' type='text/javascript'></script>
+	</head>
+	<body>
+
+		<div id="page">
+
+			<header>
+
+				<a class="logo" title="Soton UAV" href="https://www.sotonuav.uk"><span>Soton UAV</span></a>
+				<div class="hero">
+					<h1 class="page">401 Error</h1>
+					<h2 class="page"><span>401 Error</span></h2>
+				</div>
+
+				<nav>
+					<a class="mobile_menu" title="Menu" href="#"></a>
+					<ul>
+						<li>
+							<a title="Go Back" href="javascript:history.back()">Go Back</a>
+						</li>
+						<li>
+							<a title="Go Home" href="https://www.sotonuav.uk">Go Home</a>
+						</li>
+					</ul>
+				</nav>	
+
+			</header>
+
+			<section class="white">
+				<h2>You shouldn't be back here...</h2>
+
+				<h3>You access to this part of the world is denied due to invalid credentials.</h3>
+
+				<p>
+					Please either go <b><a title="Go Back" href="javascript:history.back()">back</a></b>, go <b><a title="Go Home" href="https://www.sotonuav.uk">home</a></b> or just put your feet up and watch a video, after all, it has been a long day...
+				</p>
+				
+			</section>
+
+			<section class="gallery1">
+
+				<div id="video-gallery" style="display:none;">
+
+					<a href="#">
+					<img alt="Spotter at Farnborough International Airshow"
+						data-type="youtube"
+						src="../galleries/photos/spotter-gallery/spotter-FIA-tail.jpg"
+						data-image="../galleries/photos/spotter-gallery/spotter-FIA-tail.jpg"
+						data-videoid="V1BQaCjO7to"
+						data-description="Spotter at FIA">
+					</a>
+
+				</div>
+
+	
+				<script type="text/javascript">
+
+					jQuery(document).ready(function(){
+
+						jQuery("#video-gallery").unitegallery({
+							gallery_theme: "tilesgrid",
+							tile_width: 800,
+							tile_height: 450,
+							gallery_background_color: "#245882",
+							tile_background_color: "#245882",
+							tile_enable_border:false,
+							tile_enable_shadow:false
+						});
+
+					});
+					
+				</script>
+
+			</section>
+
+			<footer>
+				&copy; Soton UAV
+				<div class="content">
+					<a title="Contact us" href="../contact/index.html">Contact Us</a>
+					<a title="Privacy Policy" href="../privacy/index.html">Privacy Policy</a>
+				</div>
+			</footer>
+		</div>
+
+	</body>
+</html>
