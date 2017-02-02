@@ -95,9 +95,18 @@ section.white article a.btn:hover { text-decoration: none; }
 
 section.blue img.long { display: block; float: left; width: 40%; padding-right: 2%; padding-bottom: 1%; }
 section.blue article.long {padding-left: 0%; padding-bottom: 5%; }
+section.blue article.long a {white-space: pre;           /* CSS 2.0 */
+							white-space: pre-wrap;      /* CSS 2.1 */
+							white-space: pre-line;      /* CSS 3.0 */
+							white-space: -pre-wrap;     /* Opera 4-6 */
+							white-space: -o-pre-wrap;   /* Opera 7 */
+							white-space: -moz-pre-wrap; /* Mozilla */
+							white-space: -hp-pre-wrap;  /* HP Printers */
+							word-wrap: break-word;      /* IE 5+ */ }
 
 section.white img.long { display: block; float: left; width: 40%; padding-right: 2%; padding-bottom: 1%; }
 section.white article.long {padding-left: 0%; padding-bottom: 5%; }
+section.white article.long a {word-wrap: break-all; }
 
 /* Section - Calendar */
 
