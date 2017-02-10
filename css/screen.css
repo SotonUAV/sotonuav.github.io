@@ -6,7 +6,6 @@ body { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; 
 
 #page { max-width: 1200px; margin: 0 auto; position: relative;}
 
-
 /* Text */
 
 h1 { margin: 0 0 1em 0; font-size: 2.8em; font-weight: 700;}
@@ -23,6 +22,17 @@ a:visited { color: #65b1ff; }
 
 a.btn { font-size: 1.2em; text-decoration: none; color: #fff; border: 1px solid #fff; padding: 4px 15px; transition: background-color .5s; }
 a.btn:hover { background-color: rgba(0,0,0,.3); }
+
+
+button, button:focus, button:active, 
+.btn, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus {
+    outline: none;
+    outline: 0;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
 
 /* Header */
 
@@ -95,18 +105,11 @@ section.white article a.btn:hover { text-decoration: none; }
 
 section.blue img.long { display: block; float: left; width: 40%; padding-right: 2%; padding-bottom: 1%; }
 section.blue article.long {padding-left: 0%; padding-bottom: 5%; }
-section.blue article.long a {white-space: pre;           /* CSS 2.0 */
-							white-space: pre-wrap;      /* CSS 2.1 */
-							white-space: pre-line;      /* CSS 3.0 */
-							white-space: -pre-wrap;     /* Opera 4-6 */
-							white-space: -o-pre-wrap;   /* Opera 7 */
-							white-space: -moz-pre-wrap; /* Mozilla */
-							white-space: -hp-pre-wrap;  /* HP Printers */
-							word-wrap: break-word;      /* IE 5+ */ }
+section.blue article.long a { word-wrap: break-all; }
 
 section.white img.long { display: block; float: left; width: 40%; padding-right: 2%; padding-bottom: 1%; }
 section.white article.long {padding-left: 0%; padding-bottom: 5%; }
-section.white article.long a {word-wrap: break-all; }
+section.white article.long a { word-wrap: break-all; }
 
 /* Section - Calendar */
 
@@ -251,6 +254,84 @@ nav ul ul li { position: relative; }
 
 nav ul ul ul { left: 100%; top: 0px; }
 
+/* List search */
+
+.list {
+  margin:0;
+  padding:20px 0 0;
+}
+.list > li {
+  display:block;
+  padding:10px;
+}
+
+input {
+  border:solid 1px #fff;
+  border-radius: 6px;
+  padding:7px 14px;
+  margin-bottom:10px;
+  position: center;
+}
+input:focus {
+  outline:none;
+  border-color:#aaa;
+}
+
+.sort {
+  padding:8px 30px;
+  border-radius: 6px;
+  border:none;
+  display:inline-block;
+  color:#245882;
+  text-decoration: none;
+  background-color: #fff;
+  height:35px;
+  transition: background-color .5s;
+  transition: color .5s;
+  outline: 0;
+}
+.sort:hover {
+  text-decoration: none;
+  color:#fff;
+  background-color: rgba(0,0,0,0.25);
+}
+.sort:focus {
+  outline: none;
+}
+.sort:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #245882;
+  content:"";
+  position: relative;
+  top:13px;
+  right:-5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #245882;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+
 
 /* Top-Level */
 
@@ -323,7 +404,7 @@ footer a:hover { color: #000; }
 
 	header { height: 309px; background-image: url(../images/spotter_banner_825.jpg); }
 	header a.logo { width: 99px; height: 80px; }
-	header div.hero { top: 150px; left: 45%; }
+	header div.hero { top: 140px; left: 45%; }
 	header div.hero h1 { font-size: 1.5em; }
 	header div.hero h1.page { font-size: 2.8em; }
 
@@ -358,7 +439,7 @@ footer a:hover { color: #000; }
 
 	/* Header */
 
-	header div.hero { top: 150px; left: 45%; }
+	header div.hero { top: 130px; left: 45%; }
 	header div.hero h1 { font-size: 1.4em; }
 	header div.hero h1.page { font-size: 2.5em; }
 
@@ -393,7 +474,7 @@ footer a:hover { color: #000; }
 	/* Header */
 	header { height: auto; min-height: 270px; background-image: url(../images/spotter_banner_625.jpg); background-position: center top;}
 
-	header div.hero { width: 55%; top: 140px; left: 45%; }
+	header div.hero { width: 55%; top: 120px; left: 45%; }
 	header div.hero h1 { margin-bottom: 10px; font-size: 1.2em; }
 	header div.hero h1.page { font-size: 2.2em; }
 
@@ -554,7 +635,7 @@ footer a:hover { color: #000; }
 	}
 
 
-	header div.hero { width: 55%; left: 45%; top: 140px; }
+	header div.hero { width: 55%; left: 45%; top: 125px; }
 
 	header div.hero h1 { display: none; font-size: 1.1em;}
 
