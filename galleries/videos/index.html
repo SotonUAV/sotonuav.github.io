@@ -18,14 +18,32 @@
 		<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="../../js/design.js"></script>
 
-		<!-- Gallery links and src -->
+
+		<!-- Add mousewheel plugin (this is optional) -->
+		<script type="text/javascript" src="../fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+		<!-- Add fancyBox -->
+		<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+		<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
+
+		<!-- Optionally add helpers - button, thumbnail and/or media -->
+		<link rel="stylesheet" href="../fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+		<link rel="stylesheet" href="../fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+		<script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+		<!-- Gallery links and src 
 
 		<script type='text/javascript' src='../unitegallery/js/jquery-11.0.min.js'></script>	
-		<script type='text/javascript' src='../unitegallery/js/unitegallery.min.js'></script>	
+		<script type='text/javascript' src='../unitegallery/js/unitegallery.js'></script>	
 
+		
 		<link rel='stylesheet' href='../unitegallery/css/unite-gallery.css' type='text/css' />
 	
-		<script type='text/javascript' src='../unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+		
+		<script type='text/javascript' src='../unitegallery/themes/tiles/ug-theme-tiles.js'></script> -->
 
 	</head>
 	<body>
@@ -108,68 +126,80 @@
 
 			</header>
 
-			<section class="gallery1">
+			<section class="section">
 
-				<h2 id="spotter" "sulsa">Video Gallery</h2>
+				<section class="videos">
+					<aside>
+						<div class="content">
+							<a class="video" title="Spotter at Farnborough International Airshow" href="https://www.youtube.com/watch?v=V1BQaCjO7to"> <img class="play left" src="../fancybox/source/play.png"  alt="play" />
+							</a>
+							<a class="video"  title="Spotter at Farnborough International Airshow" href="https://www.youtube.com/watch?v=V1BQaCjO7to"> <img class="thumb" src="../photos/spotter-gallery/spotter-FIA-tail.jpg" alt="" />
+							</a>
+							
+						</div>
 
-				<div id="video-gallery" style="display:none;">
+					</aside>
 
-					<a href="#">
-					<img alt="Spotter at Farnborough International Airshow"
-						data-type="youtube"
-						src="../photos/spotter-gallery/spotter-FIA-tail.jpg"
-						data-image="../photos/spotter-gallery/spotter-FIA-tail.jpg"
-						data-videoid="V1BQaCjO7to"
-						data-description="Spotter at FIA">
-					</a>
+					<aside>
+						<div class="content">
+							<a class="video" title="Sulsa launch from HMS Mersey" href="https://www.youtube.com/watch?v=dzxdCwwswFA"> <img class="play right" src="../fancybox/source/play.png"  alt="play" />
+							</a>
+							<a class="video"  title="Sulsa launch from HMS Mersey" href="https://www.youtube.com/watch?v=dzxdCwwswFA"> <img class="thumb" src="../photos/sulsa-gallery/hms_mersey_launch.jpg" alt="" />
+							</a>
+						</div>
+					</aside>
 
-					<a href="#">
-					<img alt="Spotter Payload Test For Project OPSARS"
-						data-type="youtube"
-						src="../../images/spotter-opsars-drop.png"
-						data-image="../../images/spotter-opsars-drop.png"
-						data-videoid="qyNuVztSG1g"
-						data-description="Spotter Payload Test For Project OPSARS">
-					</a>
+				</section>
 
-					<a href="#">
-					<img alt="Sulsa in Antarctica"
-						data-type="youtube"
-						src="../photos/sulsa-gallery/hms_protector_al_2.jpg"
-						data-image="../photos/sulsa-gallery/hms_protector_al_2.jpg"
-						data-videoid="G3r3HzVMLYo"
-						data-description="Sulsa in Antarctica">
-					</a>
+				<section class="videos">
+					<aside>
+						<div class="content">
+							<a class="video" title="Sulsa in Antarctica" href="https://www.youtube.com/watch?v=G3r3HzVMLYo"> <img class="play left" src="../fancybox/source/play.png"  alt="play" />
+							</a>
+							<a class="video"  title="SSulsa in Antarctica" href="https://www.youtube.com/watch?v=G3r3HzVMLYo"> <img class="thumb" src="../photos/sulsa-gallery/hms_protector_al_2.jpg" alt="" />
+							</a>
+							
+						</div>
 
-					<a href="#">
-					<img alt="Sulsa launch from HMS Mersey"
-						data-type="youtube"
-						src="../photos/sulsa-gallery/hms_mersey_launch.jpg"
-						data-image="../photos/sulsa-gallery/hms_mersey_launch.jpg"
-						data-videoid="dzxdCwwswFA"
-						data-description="Spotter at Chesil Beach">
-					</a>
+					</aside>
+
+					<aside>
+						<div class="content">
+							<a class="video" title="Spotter Payload Test For Project OPSARS" href="https://www.youtube.com/watch?v=qyNuVztSG1g"> <img class="play right" src="../fancybox/source/play.png"  alt="play" />
+							</a>
+							<a class="video"  title="Spotter Payload Test For Project OPSARS" href="https://www.youtube.com/watch?v=qyNuVztSG1g"> <img class="thumb" src="../../images/spotter-opsars-drop-crop.png" alt="" />
+							</a>
+						</div>
+					</aside>
+				</section>
 
 
-				</div>
-
-	
 				<script type="text/javascript">
+					jQuery(document).ready(function() {
 
-					jQuery(document).ready(function(){
+						$(".video").click(function() {
+							$.fancybox({
+								'padding'		: 10,
+								'autoSize'		: true,
+								'transitionIn'	: 'none',
+								'transitionOut'	: 'none',
+								'title'			: this.title,
+								'width'			: 1280,
+								'height'		: 720,
+								'aspectRatio'	: true, 
+								'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+								'type'			: 'swf',
+								'swf'			: {
+								'wmode'				: 'transparent',
+								'allowfullscreen'	: 'true'
+								}
+							});
 
-						jQuery("#video-gallery").unitegallery({
-							tiles_nested_optimal_tile_width:400,
-							tile_enable_textpanel: true,
-							gallery_background_color: "#245882",
-							tile_background_color: "#245882",
-							tiles_type:"nested"
+							return false;
 						});
-
 					});
-					
 				</script>
-
+				
 			</section>
 
 			<section class="white">

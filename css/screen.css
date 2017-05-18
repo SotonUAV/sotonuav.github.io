@@ -2,7 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; color: #555; margin: 0; padding: 0; }
+body { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; color: #555; margin: 0; padding: 0; min-width: 250px;}
 
 #page { max-width: 1200px; margin: 0 auto; position: relative;}
 
@@ -119,17 +119,10 @@ section.calendar div.calendar {  background-color: #245882; padding: 2% 10% 5% 1
  
 .responsiveCal iframe { position: absolute; top:0; left: 0; width: 100%; height: 100%; }
 
-
 /* Section - Map */
 
 section.map div.map {  background-color: #245882; padding: 2% 10% 5% 10%; color: #245882; }
 section.map div h2 { color: #fff; }
-
-/* Section - Atmosphere */
-
-section.atmosphere { background-color: #245882; padding-top: 30px; padding-bottom: 30px; padding-left: 30px; color: #fff; }
-
-section.atmosphere article { padding: 0 20px 0 515px; background: url(../images/photo_lounge.jpg) no-repeat 0 5px; min-height: 220px; }
 
 /* Section - Note */
 
@@ -149,39 +142,6 @@ section.details aside .content h4 { margin-bottom: 0; }
 section.details aside .content p { margin-bottom: .5em; }
 section.details aside h4 a { color: #245882; text-decoration: none; }
 section.details aside h4 a:hover { text-decoration: underline; }
-
-section.details blockquote { 
-	margin: 0; width: 32%;
-	color: #444;
-	background-color: #fff;
-	position: absolute; bottom: 0; right: 4%;
-}
-
-section.details blockquote p { margin: 30px 30px 20px 50px; }
-
-section.details blockquote p.quote { font-style: italic; font-size: 1em; }
-
-section.details blockquote p.credit {
-	color: #777;
-	font-size: .9em; margin-top: 0px; padding-left: 20px; line-height: 1.3em;
-	position: relative;
-}
-
-section.details blockquote::before { 
-	content:'\201c'; color: #d2bd65; 
-	position: absolute;
-	top: 10px; left: 8px;
-	font-size: 5em; 
-	font-family: serif;
-}
-
-section.details blockquote p.quote:after { 
-	content:'\201d'; color: #d2bd65; 
-	font-family: serif;
-}
-
-section.details blockquote p.credit::before { content: '\2014'; position: absolute; top: -1px; left: 0;}
-
 
 section.details.team {padding: 0; }
 
@@ -207,6 +167,41 @@ section.details.team {padding: 0; }
 		top: 10px; left: 0px; 
 	}
 
+	section.videos { background-color: #245882; position: relative; color: #fff; padding: 0 3% 0 3%;}
+	section.videos aside { width: 48%; float: left; margin-left: 1.5%;}
+	section.videos aside .content { padding: 10px 10px 10px 10px; }
+	section.videos aside .content img.thumb { 
+		border-radius: 10px;
+		margin-bottom: 5px; 
+		margin-top: 5px;
+		margin-left: 0%;
+		width: 100%;
+	}
+
+	section.videos aside .content img.left { 
+		background-color: rgba(0, 0, 0, 0);
+		position: absolute; 
+		width: 80px;  
+		top: 50%; 
+		left: 26%; 
+		margin: -40px 0  0 -40px;
+		opacity: 0.4; 
+		transition: opacity .5s; 
+		-moz-transition: opacity .5s; 
+		-webkit-transition: opacity .5s; 
+	}
+		section.videos aside .content img.right { 
+		position: absolute; 
+		width: 80px;  
+		top: 50%; 
+		left: 74%; 
+		margin: -40px 0  0 -40px;
+		opacity: 0.4; 
+		transition: opacity .5s; 
+		-moz-transition: opacity .5s; 
+		-webkit-transition: opacity .5s; 
+	}
+	section.videos aside .content:hover .play{ opacity: 1.0;}
 /* Section - Rotator */
 
 section.rotator div.rotator { background-color: #245882; padding: 2% 10% 5% 10%; color: #fff; }
@@ -610,6 +605,11 @@ footer a:hover { color: #000; }
 @media screen and (max-width: 575px) {
 
 	header div.hero h1 { margin-bottom: 10px; font-size: 1.1em; }
+
+	section.videos aside { width: 100%; }
+
+	section.videos aside .content img.left { left: 50%; top: 25%;}
+	section.videos aside .content img.right { left: 50%; top: 75%;}
 
 }
 
