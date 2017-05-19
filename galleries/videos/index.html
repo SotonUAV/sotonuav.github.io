@@ -169,6 +169,7 @@
 							</a>
 						</div>
 					</aside>
+
 				</section>
 
 
@@ -178,7 +179,7 @@
 						$(".video").click(function() {
 							$.fancybox({
 								'padding'		: 10,
-								'autoSize'		: true,
+								'autoScale'		: true,
 								'transitionIn'	: 'none',
 								'transitionOut'	: 'none',
 								'title'			: this.title,
@@ -189,7 +190,7 @@
 								'type'			: 'swf',
 								'swf'			: {
 								'wmode'				: 'transparent',
-								'allowfullscreen'	: true
+								'allowfullscreen'	: 'true'
 								}
 							});
 
