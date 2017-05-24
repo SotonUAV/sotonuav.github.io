@@ -111,6 +111,9 @@ section.white img.long { display: block; float: left; width: 40%; padding-right:
 section.white article.long {padding-left: 0%; padding-bottom: 5%; }
 section.white article.long a { word-wrap: break-all; }
 
+section.white p.center { text-align: center;}
+section.white a.joining { color: #245882; border-color: #245882; border-radius: 10pt;}
+
 /* Section - Calendar */
 
 section.calendar div.calendar {  background-color: #245882; padding: 2% 10% 5% 10%; color: #fff; }
