@@ -100,21 +100,23 @@
 
 			<section class="main">
 
-				<aside>
-					<div class="content happening"></a>
-						<h3><a href="./calendar/index.html">When we fly</a></h3>
-						<p>Find out when the next flight test is and what other events are coming up.</p>
-					</div>
+				
+				<aside class="link">
+						<div class="content happening">
+							<h3><a href="./calendar/index.html">When we fly</a></h3>
+							<p>Find out when the next flight test is and what other events are coming up.</p>
+						</div>
 				</aside>
+				
 
-				<aside>
+				<aside class="link">
 					<div class="content find-it">
 						<h3><a href="./maps/index.html">Where we fly</a></h3>
 						<p>Find out where most of our flying takes place and where we have flown in the past.</p>
 					</div>
 				</aside>
 
-				<aside>
+				<aside class="link"> 
 					<div class="content tools">
 						<h3><a href="./platforms/index.html">What we fly</a></h3>
 						<p>Find out what unmanned aerial vehicles we have designed and manufactured.</p>
@@ -122,6 +124,17 @@
 				</aside>
 
 			</section>
+
+			<script type="text/javascript">
+			 
+				$(".content").click(function() {
+  					window.location = $(this).find("a").attr("href");
+  					return false;
+				});
+
+				$(".content").css('cursor', 'pointer');
+			 
+			</script>
 
 			<section class="blue">
 
