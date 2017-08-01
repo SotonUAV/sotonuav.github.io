@@ -115,6 +115,7 @@
 							var thorney = new google.maps.LatLng(50.815097, -0.920494);
 							var chesil = new google.maps.LatLng(50.591426, -2.505709);
 							var ramsgate = new google.maps.LatLng(51.325741, 1.412114);
+							var fawley = new google.maps.LatLng(50.817679, -1.327714);
 							var antarctica = new google.maps.LatLng(-62.958114, -60.644526);
 							var mapOptions = {
 								center: uos,
@@ -148,6 +149,11 @@
 								position: ramsgate
 								});
 							ramsgateMarker.setMap(map);
+
+							var fawleyMarker = new google.maps.Marker({
+								position: fawley
+								});
+							fawleyMarker.setMap(map);
 
 							var antarcticaMarker = new google.maps.Marker({
 								position: antarctica
@@ -198,6 +204,17 @@
 							});
 							ramsgateCircle.setMap(map);
 
+							var fawleyCircle = new google.maps.Circle({
+								center: fawley,
+								radius: 2000,
+								strokeColor: "#245882",
+								strokeOpacity: 1,
+								strokeWeight: 2,
+								fillColor: "#245882",
+								fillOpacity: 0.4
+							});
+							fawleyCircle.setMap(map);
+
 							var antarcticaCircle = new google.maps.Circle({
 								center: antarctica,
 								radius: 200000,
@@ -221,9 +238,11 @@
 							var chesilMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Chesil Beach" href="#chesil">Chesil Beach</a>' });
 							google.maps.event.addListener(chesilMarker, 'click', function() { chesilMarkerInfo.open(map,chesilMarker); });
 
-
 							var ramsgateMarkerInfo = new google.maps.InfoWindow({ content: '<a style="color:#245882;" title="Port of Ramsgate" href="#ramsgate">Port of Ramsgate</a>' });
 							google.maps.event.addListener(ramsgateMarker, 'click', function() { ramsgateMarkerInfo.open(map,ramsgateMarker); });
+
+							var fawleyMarkerInfo = new google.maps.InfoWindow({ content: '<a style="color:#245882;" title="Fawley Power Station" href="#fawley">Fawley Power Station</a>' });
+							google.maps.event.addListener(fawleyMarker, 'click', function() { fawleyMarkerInfo.open(map,fawleyMarker); });
 
 							var antarcticaMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Antarctica" href="#antarctica">Antarctica</a>' });
 							google.maps.event.addListener(antarcticaMarker, 'click', function() { antarcticaMarkerInfo.open(map,antarcticaMarker); });
@@ -335,7 +354,23 @@
 
 			</section>
 
-			<section class="white" id="chesil">
+			<section class="white" id="fawley">
+
+				<img alt="Fawley Power Station" src="../images/fawley.png">
+
+				<article>
+					<h2>Fawley Power Station</h2>
+					
+					<p>
+						As part of the UK Robotics Week the Autonomous Systems Strategic Research Group and the University of Southampton produced a short film demonstrating the use of robotics for emergency response to a disaster scene. We flew Spotter around the power station for film footage which can be seen by clicking the "find out more" button below.
+
+					</p>
+					<a class="btn" title="Finding Lucy" href="https://www.youtube.com/watch?v=-SItrtSRwWY">Find out more</a>
+				</article>
+
+			</section>
+
+			<section class="blue" id="chesil">
 
 				<img alt="Chesil Beach" src="../images/chesil.jpg">
 
@@ -350,7 +385,7 @@
 
 			</section>
 
-			<section class="blue" id="ramsgate">
+			<section class="white" id="ramsgate">
 
 				<img alt="Ramsgate" src="../images/ramsgate.jpg">
 
