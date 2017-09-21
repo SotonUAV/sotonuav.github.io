@@ -266,7 +266,7 @@ nav ul ul ul { left: 100%; top: 0px; }
 }
 
 input {
-  border:solid 1px #fff;
+  border:solid 0px #fff;
   border-radius: 6px;
   padding:7px 14px;
   margin-bottom:10px;
@@ -277,14 +277,15 @@ input:focus {
 }
 
 .sort {
-  padding:8px 30px;
+  width: 120px;
+  padding:7px 7px;
   border-radius: 6px;
   border:none;
   display:inline-block;
   color:#245882;
   text-decoration: none;
   background-color: #fff;
-  height:35px;
+  height:29px;
   transition: background-color .5s;
   transition: color .5s;
   outline: 0;
@@ -300,35 +301,38 @@ input:focus {
 .sort:after {
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
   border-bottom: 5px solid transparent;
+  border-top: 5px solid #245882;
   content:"";
   position: relative;
-  top:-10px;
-  right:-5px;
+  top:11px;
+  right:-3px;
 }
 .sort.asc:after {
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #245882;
+  border-left: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid #245882;
   content:"";
   position: relative;
-  top:13px;
-  right:-5px;
+  top:-11px;
+  right:-3px;
 }
 .sort.desc:after {
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #245882;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid #245882;
   content:"";
   position: relative;
-  top:-10px;
-  right:-5px;
+  top:11px;
+  right:-3px;
 }
 
 
