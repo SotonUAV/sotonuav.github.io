@@ -118,6 +118,7 @@
 							var fawley = new google.maps.LatLng(50.817679, -1.327714);
 							var antarctica = new google.maps.LatLng(-62.958114, -60.644526);
 							var farnborough = new google.maps.LatLng(51.277891, -0.770059);
+							var mayflower = new google.maps.LatLng(50.897457, -1.409075);
 							var mapOptions = {
 								center: uos,
 								zoom: 7,
@@ -165,6 +166,11 @@
 								position: farnborough
 								});
 							farnboroughMarker.setMap(map);
+
+							var mayflowerMarker = new google.maps.Marker({
+								position: mayflower
+								});
+							mayflowerMarker.setMap(map);
 
 							var draycotCircle = new google.maps.Circle({
 								center: draycot,
@@ -243,6 +249,17 @@
 							});
 							farnboroughCircle.setMap(map);
 
+							var mayflowerCircle = new google.maps.Circle({
+								center: mayflower,
+								radius: 500,
+								strokeColor: "#245882",
+								strokeOpacity: 1,
+								strokeWeight: 2,
+								fillColor: "#245882",
+								fillOpacity: 0.4
+							});
+							mayflowerCircle.setMap(map);
+
 							var uosMarkerInfo = new google.maps.InfoWindow({ content: '<a style="color:#245882;" title="Boldrewood Innovation Campus" href="#boldrewood">Boldrewood Innovation Campus</a>' });
 							google.maps.event.addListener(uosMarker, 'click', function() { uosMarkerInfo.open(map,uosMarker); });
 
@@ -266,6 +283,9 @@
 
 							var farnboroughMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Farnborough" href="#farnborough">Farnborough</a>' });
 							google.maps.event.addListener(farnboroughMarker, 'click', function() { farnboroughMarkerInfo.open(map,farnboroughMarker); });
+
+							var mayflowerMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Mayflower Park" href="#mayflower">Mayflower Park</a>' });
+							google.maps.event.addListener(mayflowerMarker, 'click', function() { mayflowerMarkerInfo.open(map,mayflowerMarker); });
 
 						}
 					</script>
@@ -432,6 +452,21 @@
 
 					</p>
 					<a class="btn" title="Spotter at FIA16" href="https://www.youtube.com/watch?v=V1BQaCjO7to">Find out more</a>
+				</article>
+
+			</section>
+
+			<section class="white" id="mayflower">
+
+				<img alt="Mayflower Park" src="../images/mayflower.jpg">
+
+				<article>
+					<h2>Mayflower Park</h2>
+					
+					<p>
+						Spotter was involved in a demonstration of a drone use-case at Mayflower Park, Southampton for the Nesta Flying High Challenge. During this 15 minute flight Spotter carried a payload representing an urgent medical delivery.
+					</p>
+					<a class="btn" title="Flying High Challenge" href="http://flyinghighchallenge.org/">Find out more</a>
 				</article>
 
 			</section>
