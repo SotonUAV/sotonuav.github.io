@@ -119,6 +119,7 @@
 							var antarctica = new google.maps.LatLng(-62.958114, -60.644526);
 							var farnborough = new google.maps.LatLng(51.277891, -0.770059);
 							var mayflower = new google.maps.LatLng(50.897457, -1.409075);
+							var popham = new google.maps.LatLng(51.195023, -1.239167);
 							var mapOptions = {
 								center: uos,
 								zoom: 7,
@@ -171,6 +172,11 @@
 								position: mayflower
 								});
 							mayflowerMarker.setMap(map);
+
+							var pophamMarker = new google.maps.Marker({
+								position: popham
+								});
+							pophamMarker.setMap(map);
 
 							var draycotCircle = new google.maps.Circle({
 								center: draycot,
@@ -260,6 +266,17 @@
 							});
 							mayflowerCircle.setMap(map);
 
+							var pophamCircle = new google.maps.Circle({
+								center: popham,
+								radius: 500,
+								strokeColor: "#245882",
+								strokeOpacity: 1,
+								strokeWeight: 2,
+								fillColor: "#245882",
+								fillOpacity: 0.4
+							});
+							pophamCircle.setMap(map);
+
 							var uosMarkerInfo = new google.maps.InfoWindow({ content: '<a style="color:#245882;" title="Boldrewood Innovation Campus" href="#boldrewood">Boldrewood Innovation Campus</a>' });
 							google.maps.event.addListener(uosMarker, 'click', function() { uosMarkerInfo.open(map,uosMarker); });
 
@@ -281,11 +298,14 @@
 							var antarcticaMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Antarctica" href="#antarctica">Antarctica</a>' });
 							google.maps.event.addListener(antarcticaMarker, 'click', function() { antarcticaMarkerInfo.open(map,antarcticaMarker); });
 
-							var farnboroughMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Farnborough" href="#farnborough">Farnborough</a>' });
+							var farnboroughMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Farnborough International Airshow" href="#farnborough">Farnborough International Airshow</a>' });
 							google.maps.event.addListener(farnboroughMarker, 'click', function() { farnboroughMarkerInfo.open(map,farnboroughMarker); });
 
 							var mayflowerMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Mayflower Park" href="#mayflower">Mayflower Park</a>' });
 							google.maps.event.addListener(mayflowerMarker, 'click', function() { mayflowerMarkerInfo.open(map,mayflowerMarker); });
+
+							var pophamMarkerInfo = new google.maps.InfoWindow({ content:'<a style="color:#245882;" title="Popham Mini Airshow" href="#popham">Popham Mini Airshow</a>' });
+							google.maps.event.addListener(pophamMarker, 'click', function() { pophamMarkerInfo.open(map,pophamMarker); });
 
 						}
 					</script>
@@ -456,7 +476,22 @@
 
 			</section>
 
-			<section class="white" id="mayflower">
+			<section class="white" id="popham">
+
+				<img alt="Popham Mini Airshow" src="../images/popham.jpg">
+
+				<article>
+					<h2>Popham Mini Airshow</h2>
+					
+					<p>
+						Spotter UAS performed a flight display at Popham Mini Airshow 2018 in front of many RC and drone enthusiasts. The event was run by Team MiniAirshow and more information can be found on their website.
+					</p>
+					<a class="btn" title="Mini Airshow" href="http://miniairshow.co.uk/">Find out more</a>
+				</article>
+
+			</section>
+
+			<section class="blue" id="mayflower">
 
 				<img alt="Mayflower Park" src="../images/mayflower.jpg">
 
